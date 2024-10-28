@@ -21,8 +21,8 @@ Use the maze.launch file to start the simulation. You can choose between several
 
 ### Arguments
 1. maze_id: Choose a maze layout by setting the ID (1 to 7).
-2. x_start: Set the robot's initial x-coordinate.
-3. y_start: Set the robot's initial y-coordinate.
+2. x_pos: Set the robot's initial x-coordinate.
+3. y_pos: Set the robot's initial y-coordinate.
 
 
 ### Example Usage
@@ -31,5 +31,5 @@ To launch the simulation with maze ID 3 and set the robot's starting position to
 
 
    ```bash
-   roslaunch ros_maze_worlds maze.launch maze_id:=3 x_start:=0.5 y_start:=1.0
+   roslaunch maze_pkg maze.launch maze_id:=3 x_pos:=-3.0 y_pos:=1.0
    ```

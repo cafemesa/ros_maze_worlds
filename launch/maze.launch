@@ -1,0 +1,22 @@
+<launch>
+
+    <!-- Arguments-->
+    <arg name="maze_id" default="1" doc="maze id [1, 2, 3, 4, 5, 6, 7]"/> 
+    <arg name="model" default="burger"/>
+    <arg name="x_pos" default="-0.75"/>
+    <arg name="y_pos" default="0.75"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <!-- Gazebo Simulator -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="use_sim_time" value="true"/>
+        <arg name="debug" value="false"/>
+        <arg name="gui" value="true" />
+        <arg name="world_name" value="$(find maze_pkg)/worlds/maze_$(arg maze_id).world"/>
+    </include>
+
+    <!-- Robot model in Gazebo -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model turtlebot3 -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+    
+</launch>

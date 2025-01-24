@@ -6,7 +6,7 @@
 
     <!-- Arguments -->
 
-    <arg name="maze_id" default="8" doc="maze id [1, 2, 3, 4, 5, 6, 7, 8]" />
+    <arg name="maze_id" default="11" doc="maze id [1, 2, 3, 4, 5, 6, 7, 8]" />
     <arg name="model" default="burger" />
     <arg name="x_pos" default="-0.75" />
     <arg name="y_pos" default="0.75" />

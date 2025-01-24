@@ -1,0 +1,7 @@
+image: maze11.pgm
+resolution: 0.050000
+origin: [-99.900000, -100.180000, 0.0000000]
+negate: 0
+occupied_thresh: 0.625
+free_thresh: 0.185
+
